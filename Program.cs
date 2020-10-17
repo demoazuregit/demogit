@@ -19,6 +19,9 @@ namespace demogit
             VssConnection connection = new VssConnection(orUrl, new VssBasicCredential(string.Empty, personalAccesToken));
 
             ShowWorkItemDetails(connection, workItemId).Wait();
+
+            Console.WriteLine("1er commit");
+
         }
 
         static private async Task ShowWorkItemDetails(VssConnection connection, int workItemId)
